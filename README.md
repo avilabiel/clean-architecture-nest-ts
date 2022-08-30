@@ -1,10 +1,18 @@
 # typescript-starter
 
-This is a repository to start new TS projects quickly.
+This is a repository to start new TS projects quickly using Nest and following SOLID principles (Clean Architecture).
+
+## Layers
+
+This project has only 3 layers:
+
+- Entities: to define the simple entities and their repositories
+- Use Cases: to define the actions of the system
+- Externals: everything else that is not related to business rules like storage, frameworks, etc.
 
 ## Run everything in JS
 
-We compile everyt TS to JS and then we run JS. This is better because sometimes the app runs in TS, but there are a lot of errors when we compile to JS.
+We compile every TS to JS and then we run JS. This is better because sometimes the app runs in TS, but there are a lot of errors when we compile to JS.
 
 Running everything into JS already saves a lot of time.
 

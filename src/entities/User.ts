@@ -17,4 +17,6 @@ export interface UserRepository {
   delete(userId: number): Promise<void>;
 
   getAll(): Promise<User[]>;
+
+  update(user: User): Promise<User>;
 }

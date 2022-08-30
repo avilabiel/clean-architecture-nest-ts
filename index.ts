@@ -1,4 +1,3 @@
-// Create your index here
-console.log("My index here!");
+import NestBootstrap from "@/externals/nest/bootstrap";
 
-// Put logic inside of ./src
+NestBootstrap();

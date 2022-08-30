@@ -15,4 +15,6 @@ export interface UserRepository {
   getById(userId: number): Promise<User | null>;
 
   delete(userId: number): Promise<void>;
+
+  getAll(): Promise<User[]>;
 }

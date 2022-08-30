@@ -17,4 +17,12 @@ export default class UserRepositoryInMemory implements UserRepository {
       this.users.find((user) => user.id === userId) ?? null
     );
   }
+
+  delete(userId: number): Promise<void> {
+    const userIndex = this.users.findIndex((user) => user.id === userId);
+
+    this.users.splice(userIndex, 1);
+
+    return Promise.resolve();
+  }
 }

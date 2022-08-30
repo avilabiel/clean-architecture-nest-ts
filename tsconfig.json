@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "rootDir": ".",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "composite": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      }
+    ],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "exclude": ["node_modules", "dist"]
+}

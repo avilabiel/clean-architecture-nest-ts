@@ -19,11 +19,11 @@ describe("CreateUser", () => {
   });
 
   describe("validating fields", () => {
-    it("throws an error when name is invalid", () => {
+    it("throws an error when name is invalid", async () => {
       const user = { name: "", email: "testevaldo@gmail.com" };
 
       try {
-        CreateUser.execute({
+        await CreateUser.execute({
           user,
           userRepository: new UserRepositoryInMemory(),
         });

@@ -11,4 +11,6 @@ export default class User {
 
 export interface UserRepository {
   create({ user }: { user: User }): Promise<User>;
+
+  getById(userId: number): Promise<User | null>;
 }

@@ -4,10 +4,17 @@ export default class UserRepositoryInMemory implements UserRepository {
   private users: User[] = [];
 
   create({ user }: { user: User }): Promise<User> {
-    user.id = this.users.length;
+    user.id = this.users.length + 1;
+    user.createdAt = new Date();
 
     this.users.push(user);
 
     return Promise.resolve(user);
+  }
+
+  getById(userId: number): Promise<User | null> {
+    return Promise.resolve(
+      this.users.find((user) => user.id === userId) ?? null
+    );
   }
 }

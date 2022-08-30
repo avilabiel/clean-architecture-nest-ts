@@ -2,10 +2,20 @@ import UserRepositoryInMemory from "@/externals/database/in-memory/user-reposito
 import CreateUser from "./create-user";
 
 describe("CreateUser", () => {
-  it("creates a user", () => {
+  it("creates a user", async () => {
     const user = { name: "Testevaldo Silva", email: "testevaldo@gmail.com" };
 
-    CreateUser.execute({ user, userRepository: new UserRepositoryInMemory() });
+    const persistedUser = await CreateUser.execute({
+      user,
+      userRepository: new UserRepositoryInMemory(),
+    });
+
+    expect(persistedUser).toMatchObject({
+      id: 1,
+      name: "Testevaldo Silva",
+      email: "testevaldo@gmail.com",
+    });
+    expect(persistedUser).toHaveProperty("createdAt");
   });
 
   describe("validating fields", () => {

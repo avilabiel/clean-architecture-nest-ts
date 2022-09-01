@@ -38,6 +38,33 @@ This repository supports the following features:
 
 - Absolute paths by `@/`
 
+## Organization
+
+This codebase has 3 main folders:
+
+- `src/entities`: To define the entities and their repositories (what each Entity can do)
+
+For example: There is an entity `User` and this entity has the following actions to be covered by repositories:
+
+1. create()
+2. update()
+3. delete()
+4. getAll()
+5. getById()
+
+- `src/app`: To define the system actions. For example:
+
+1. create-user
+2. update-user
+3. delete-user
+4. get-user-by-id
+5. list-users
+
+Each use case should have its automated tests.
+
+- `src/externals`: To define the rest, things that are not important for the business rules like Database, Frameworks (Express, Nest, Stocket), Libraries, etc.
+
+
 ## Libraries
 
 - `Nodemon` for starting services in development mode

@@ -5,7 +5,10 @@ export default class User {
   createdAt?: Date;
 
   constructor(props: User) {
-    Object.assign(this, props);
+    this.id = props.id;
+    this.name = props.name;
+    this.email = props.email;
+    this.createdAt = props.createdAt;
   }
 }
 

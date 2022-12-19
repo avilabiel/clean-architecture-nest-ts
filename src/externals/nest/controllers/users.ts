@@ -7,9 +7,9 @@ import {
   HttpException,
 } from "@nestjs/common";
 import ListUsers from "@/app/list-users";
-import User from "@/entities/User";
+import User from "@/entities/user";
 import config from "@/config";
-import CreateUser from "@/app/create-user";
+import CreateUser from "@/app/use-cases/create-user";
 
 @Controller("users")
 export class UserController {

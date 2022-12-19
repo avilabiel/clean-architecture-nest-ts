@@ -1,4 +1,4 @@
-import CreateUser from "@/app/create-user";
+import CreateUser from "@/app/use-cases/create-user";
 import UserRepositoryInMemory from "@/externals/database/in-memory/user-repository-in-memory";
 import ListUsers from "./list-users";
 

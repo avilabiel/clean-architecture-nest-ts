@@ -1,5 +1,5 @@
-import IUseCase from "@/app/iuse-case";
-import User, { UserRepository } from "@/entities/User";
+import IUseCase from "@/app/contracts/i-use-case";
+import User, { UserRepository } from "@/entities/user";
 
 class CreateUser implements IUseCase {
   async execute({

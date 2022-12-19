@@ -1,4 +1,4 @@
-import User, { UserRepository } from "@/entities/User";
+import User, { UserRepository } from "@/entities/user";
 import IUseCase from "../iuse-case";
 
 class GetUserById implements IUseCase {

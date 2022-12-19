@@ -1,6 +1,7 @@
-import IUseCase from "@/app/iuse-case";
-import User, { UserRepository } from "@/entities/User";
-import GetUserById from "../get-user-by-id";
+import UserRepository from "@/app/contracts/i-user-repository";
+import IUseCase from "@/app/contracts/i-use-case";
+import User from "@/entities/user";
+import GetUserById from "@/app/use-cases/get-user-by-id";
 
 class UpdateUser implements IUseCase {
   async execute({

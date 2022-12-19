@@ -1,6 +1,6 @@
-import { UserRepository } from "@/entities/User";
-import GetUserById from "@/app/get-user-by-id";
-import IUseCase from "@/app/iuse-case";
+import UserRepository from "@/app/contracts/i-user-repository";
+import GetUserById from "@/app/use-cases/get-user-by-id";
+import IUseCase from "@/app/contracts/i-use-case";
 
 class DeleteUser implements IUseCase {
   async execute({

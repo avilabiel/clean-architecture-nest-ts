@@ -1,4 +1,4 @@
-import User, { UserRepository } from "@/entities/User";
+import User, { UserRepository } from "@/entities/user";
 
 export default class UserRepositoryInMemory implements UserRepository {
   private users: User[] = [];

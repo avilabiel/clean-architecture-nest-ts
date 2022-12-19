@@ -44,7 +44,9 @@ This codebase has 3 main folders:
 
 - `src/entities`: To define the entities and their repositories (what each Entity can do)
 
-For example: There is an entity `User` and this entity has the following actions to be covered by repositories:
+For example: There is an entity `User`.
+
+- `src/app/contracts`: It defines the contracts that should be followed especially by external items like `IUserRepository`:
 
 1. create()
 2. update()
@@ -52,7 +54,7 @@ For example: There is an entity `User` and this entity has the following actions
 4. getAll()
 5. getById()
 
-- `src/app`: To define the system actions. For example:
+- `src/app/use-cases`: To define the system actions. For example:
 
 1. create-user
 2. update-user
@@ -61,6 +63,8 @@ For example: There is an entity `User` and this entity has the following actions
 5. list-users
 
 Each use case should have its automated tests.
+
+- `src/app/errors`: To define the errors classes.
 
 - `src/externals`: To define the rest, things that are not important for the business rules like Database, Frameworks (Express, Nest, Stocket), Libraries, etc.
 
